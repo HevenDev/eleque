@@ -178,7 +178,9 @@ header h2 {
   font-family: var(--CINZEL-font-);
   transform: translateX(-100%);
   transition: transform 0.4s ease-in-out;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4); /* Shadow to the right */
 }
+
 .navLinks.active {
   transform: translateX(0);
 }
@@ -387,6 +389,9 @@ header h2 {
   width: 60%;
   color: var(--primary-color-);
 }
+.contactForm input::placeholder, .contactForm textarea::placeholder{
+  color: var(--primary-color-);
+}
 .submitForm {
   font-size: 19px !important;
   background-color: var(--royal-lightBlue-color-) !important;
@@ -414,7 +419,7 @@ header h2 {
 .footerHr {
   margin: 1.5rem auto;
   width: 70%;
-  background-color: var(--royal-darkBlue-color-);
+  background-color: var(--text-color-);
   height: 1px;
   border: none;
 }
@@ -433,6 +438,14 @@ header h2 {
   font-family: var(--CINZEL-font-);
   padding: 0 1.5rem;
   text-align: center;
+}
+.footerLogo{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.footerLogo img{
+  width: 200px;
 }
 .copyright {
   text-align: center;
