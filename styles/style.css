@@ -134,11 +134,12 @@ header {
   background-color: var(--royal-lightBlue-color-);
 }
 header h2 {
+  position: relative;
   font-size: 29px;
   font-family: var(--CINZEL-font-);
   font-weight: 600;
-  width: 100%;
-  text-align: center;
+  left: 45%;
+  transform: translateX(-100%);
 }
 .menu {
   display: flex;
@@ -147,7 +148,11 @@ header h2 {
 }
 .menu i {
   font-size: 19px;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
+}
+.menu img {
+  width: 50px;
+  height: 50px;
 }
 .navLinks {
   position: fixed;
@@ -268,7 +273,7 @@ header h2 {
 /* ===wwd=== */
 .wwdImg {
   width: 380px;
-  height: 400px;
+  height: 600px;
   box-shadow: 0px 8px 16px rgba(100, 92, 255, 0.3);
   border-radius: 8px; /* Optional, for a smoother look */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -278,11 +283,9 @@ header h2 {
   transform: translateY(-8px);
   box-shadow: 0px 16px 32px rgba(100, 92, 255, 0.5);
 }
-
 .wwdDiv {
   padding: 1.5rem 0;
 }
-
 /* ===Project=== */
 .projectCards {
   position: relative;
@@ -324,6 +327,13 @@ header h2 {
   transform: translateX(-50%);
   background-color: var(--royal-lightBlue-color-);
 }
+/* === Contact === */
+.contactSection{
+  padding: 1.5rem 2rem;
+  width: 100%;
+  height: 550px;
+  background-color: #645cff;
+}
 /* ===Footer=== */
 .footer {
   background-color: var(--royal-lightBlue-color-);
@@ -363,8 +373,6 @@ header h2 {
   padding: 0 1.5rem;
   text-align: center;
 }
-.links li a {
-}
 .copyright {
   text-align: center;
   padding: 15px 0;
@@ -400,10 +408,13 @@ header h2 {
   .projectCards{
     height: 475px;
   }
+  header h2{
+    transform: translateX(-50%);
+  }
   .menu h1{
     display: none;
   }
-  .menu i{
-    margin: 2rem 0;
+  .menu img{
+    margin: 1rem 0;
   }
 }
