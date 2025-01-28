@@ -1,0 +1,63 @@
+@media (max-width: 1024px) {
+  .popupImg{
+    display: none;
+  }
+  .popupForm{
+    width: 300px;
+  }
+}
+
+@media (max-width: 550px) {
+  .logo a{
+    margin-left: 1rem;
+    font-size: 35px;
+  }
+  .enquiry{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .enquiry button{
+    width: 100%;
+    border-radius: 0;
+  }
+  .menuBar{
+    margin: 1rem 1rem 1rem 0;
+  }
+  .header{
+    background-color: #fff;
+  }
+  .headerNav ul{
+    width: 100%;
+  }
+  .headerNav ul img{
+    transform: translateX(calc(50%));
+  }
+  .overviewHeading, .amenitiesHeading,.highlightHeading, .floorPlanHeading, .galleryHeading, .locatingHeading, .aboutHeading{
+    font-size: 23px;
+  }
+  .overviewSection, .amenitiesSection, .locationMap{
+    padding: 1rem 1rem;
+  }
+  .overviewPara, .overviewImg, .highlightsImg, .highlightsPara{
+    width: 300px;
+    height: 100%;
+  }
+  .amenitiesImg, .galleryImg{
+    width: 300px;
+  }
+  .a-g-bigImg{
+    height: auto;
+  }
+  .floorPlans{
+    width: 300px;
+    height: 400px;
+  }
+  .locationPara, .aboutHeadPara, .galleryPara{
+    width: 90%;
+  }
+  .aboutPara{
+    width: 100%;
+  }
+}
