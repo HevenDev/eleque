@@ -225,7 +225,10 @@ input[type="number"]::-webkit-outer-spin-button {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow at the bottom */
    /* Smooth transition */
 }
-
+.logo{
+  width: 250px;
+  margin-top: 6px;
+}
 .logo a{
   font-family: var(--CINZEL-font-);
   margin-left: 2rem;
@@ -570,8 +573,15 @@ textarea{
 }
 
 /* === Footer Plan === */
+.footerBg{
+  position: absolute;
+  z-index: -1;
+}
 .footer {
-  background-color: var(--orange-color-);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
 }
 .footerDiv {
   display: flex;
@@ -584,7 +594,6 @@ textarea{
 .footerContent {
   width: 200px;
 }
-
 .footerHr {
   margin: 1rem auto;
   width: 70%;
@@ -597,7 +606,6 @@ textarea{
   display: flex;
   flex-direction: column;
   gap: 8px;
-
 }
 .footerContact h3 {
   font-family: var(--CINZEL-font-);
@@ -607,7 +615,20 @@ textarea{
   font-size: 29px;
 }
 .footerContent h1{
-  margin: 2rem 0 1rem 0 !important;
+  margin: 2rem 0 1rem 0 ;
+  font-size: 25px;
+  font-family: var(--CINZEL-font-);
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.footerSocial {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+  margin-top: 1rem;
 }
 .links {
   font-size: 20px;
@@ -620,6 +641,9 @@ textarea{
   flex-direction: column;
   gap: 10px;
   white-space: nowrap;
+}
+.links li a{
+  color: var(--text-color-);
 }
 .footerLogo{
   position: absolute;
