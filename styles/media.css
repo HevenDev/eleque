@@ -6,7 +6,6 @@
     width: 300px;
   }
 }
-
 @media (max-width: 550px) {
   .logo a{
     margin-left: 1rem;

@@ -16,6 +16,28 @@
     <title>Eleque</title>
   </head>
   <body>
+    <div id="popup" class="popup">
+      <div class="popupDiv">
+        
+        <div class="parentPopup">
+          <div class="closeBtn">
+            <div class="c-bars c-bar1"></div>
+            <div class="c-bars c-bar2"></div>
+          </div>
+          <div class="popupImg"><img src="/images/Dholera1.jpg" alt=""></div>
+          <div class="popupForm">
+            <h2>Enquire Now</h2>
+          <form action="">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="number" placeholder="Number" />
+            <textarea name="" id="" rows="4" placeholder="Message"></textarea>
+            <input class="submitForm" type="submit" placeholder="Submit" />
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="homeSection" id="home">
       <header>
         <div class="menu">
@@ -29,7 +51,7 @@
           <li><a href="#about">About us</a></li>
           <li><a href="#location">Location</a></li>
           <li><a href="#wwd">What we do</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li class="popButton"><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact us</a></li>
         </ul>
         <h2><a href="#home"><img src="/images/logo.png" alt="logo"></a></h2>
@@ -63,7 +85,7 @@
             potential while ensuring a seamless, trustworthy experience—from
             plot selection to final registration.
           </p>
-          <button class="aboutBtn">Read More</button>
+          <button class="aboutBtn popButton">Read More</button>
         </div>
       </div>
       <div class="slider">
@@ -83,54 +105,68 @@
       <div class="locationDiv">
         <a href="/dholera.html">
         <div class="locationImg">
+          <div class="locationContent">
+            <li>India’s first integrated Smart City under the DMIC.</li>
+            
+          </div>
           <img
             src="/images/locationDholera.png"
             alt="dholera"
           />
           <h3>Dholera</h3>
+          
         </div>
       </a>
-        <div class="locationImg">
+        <div class="locationImg popButton">
+          <div class="locationContent">
+            <li>Luxurious villas and stylish studio apartments capturing beachside serenity.</li>
+            
+          </div>
           <img
             src="/images/locationGoa.png"
             alt="goa"
           />
           <h3>Goa</h3>
+          
         </div>
-        <div class="locationImg">
+        <div class="locationImg popButton">
+          <div class="locationContent">
+            <li>Modern housing solutions in the bustling economic capital.</li>
+            
+          </div>
           <img
             src="/images/locationMumbai.png"
             alt="mumbai"
           />
           <h3>Mumbai</h3>
+          
         </div>
       </div>
       <div class="locationBtnDiv">
-        <button class="locationBtn">All Location</button>
+        <button class="locationBtn popButton">All Location</button>
       </div>
     </section>
     <section class="wwdSection" >
       <h1>What we do</h1>
       <p>
-        Redefining living spaces and creating iconic landmarks through an
-        unswerving passion for quality and the philosophy of self-reliance.
+        At Eleque Infra, we prioritize customer satisfaction, architectural innovation, and sustainable development. Each project is meticulously planned to align with local culture and environmental considerations. Our dedicated team of architects, engineers, and project managers ensures timely delivery and uncompromised quality across all our ventures.
       </p>
       <div class="wwdDiv">
-        <div class="wwdImg">
+        <div class="wwdImg popButton">
           <img
             src="https://www.sobha.com/wp-content/uploads/2020/12/Commercial-1.webp"
             alt=""
           />
           <h3>Commercial</h3>
         </div>
-        <div class="wwdImg">
+        <div class="wwdImg popButton">
           <img
             src="https://www.sobha.com/wp-content/uploads/2020/12/Contracting-1.webp"
             alt=""
           />
           <h3>Contracting</h3>
         </div>
-        <div class="wwdImg">
+        <div class="wwdImg popButton">
           <img
             src="https://www.sobha.com/wp-content/uploads/2020/12/Manufacturing-1.webp"
             alt=""

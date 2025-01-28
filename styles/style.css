@@ -118,6 +118,102 @@ header {
   background-color: transparent;
   transition: background-color 0.2s ease-in-out;
 }
+/* ===Popup=== */
+.popup {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background: #00000072;
+  visibility: hidden; /* Use visibility instead of display */
+  opacity: 0; /* Start with 0 opacity */
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.popup-active {
+  visibility: visible; /* Show element */
+  opacity: 1; /* Fade in */
+}
+.parentPopup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  transform: translateY(-50px); /* Start off-screen */
+  opacity: 0; /* Start with 0 opacity */
+  visibility: hidden; /* Use visibility instead of display */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+.parentPopup-active {
+  visibility: visible; /* Show element */
+  transform: translateY(0); /* Slide into position */
+  opacity: 1; /* Fade in */
+}
+.popupDiv{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popupImg, .popupForm{
+  width: 450px;
+  height: 450px;
+}
+.closeBtn{
+  top: 0.7rem;
+  right: 1.2rem;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.c-bars{
+  width: 100%;
+  height: 3px;
+  background: #000;
+  
+}
+.c-bar1{
+  transform: rotateZ(45deg);
+}
+.c-bar2{
+  transform: rotateZ(-45deg);
+}
+.popupForm{
+  border: 1px solid var(--orange-color-);
+}
+.popupForm h2{
+  font-family: var(--CINZEL-font-);
+  font-size: 30px;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.popupForm form{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 1rem 2rem;
+}
+.popupForm form input, .popupForm form textarea{
+  padding: 10px 1rem;
+  font-size: 17px;
+  font-family: var(--Roboto-font-);
+  background-color: rgb(220, 232, 226);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+/* ===About=== */
 .slider {
   margin: 2rem 2rem 0 2rem;
 }
@@ -264,12 +360,23 @@ header h2 {
   padding: 0.5rem 0;
   letter-spacing: 1px;
 }
+.locationContent{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.locationContent li{
+  font-family: var(--Libre-font-);
+  padding: 0.5rem;
+  font-size: 16px;
+  text-align: center;
+}
 .locationBtnDiv {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 11rem;
 }
 .locationBtn {
   padding: 6px 12px;
@@ -290,6 +397,9 @@ header h2 {
 .wwdImg:hover {
   transform: translateY(-8px);
   box-shadow: 0px 16px 32px rgba(92, 255, 206, 0.5);
+}
+.wwdSection> p{
+  font-size: 15px;
 }
 .wwdDiv {
   padding: 1.5rem 0;
