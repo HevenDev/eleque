@@ -146,8 +146,8 @@ header h2 {
   left: 50%;
   transform: translateX(-50%);
   display: inline;
-  top: 5px;
-  height: 90%;
+  top: 1.2rem;
+  width: 250px;
 }
 .menu {
   display: flex;
@@ -413,7 +413,7 @@ header h2 {
 }
 .footerContent {
   width: 300px;
-  height: 250px;
+  height: 275px;
 }
 
 .footerHr {
@@ -438,6 +438,9 @@ header h2 {
   font-family: var(--CINZEL-font-);
   padding: 0 1.5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .footerLogo{
   display: flex;
