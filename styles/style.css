@@ -104,7 +104,7 @@ h1 {
 p {
   font-size: 18px;
   text-align: center;
-  font-family: var(--CINZEL-font-);
+  font-family: var(--Libre-font-);
 }
 header {
   position: fixed;
@@ -143,8 +143,8 @@ header h2 {
   font-size: 29px;
   font-family: var(--CINZEL-font-);
   font-weight: 600;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   display: inline;
   top: 1.2rem;
   width: 250px;
@@ -259,7 +259,7 @@ header h2 {
 .locationImg h3,
 .wwdImg h3 {
   font-size: 18px;
-  font-family: var(--CINZEL-font-);
+  font-family: var(--Libre-font-);
   font-weight: 500;
   text-align: center;
   padding: 0.5rem 0;
@@ -301,12 +301,11 @@ header h2 {
   position: relative;
   height: 450px;
   width: 350px;
-  background-color: #fff; /* Optional: to make it stand out */
-  box-shadow: 0 4px 10px rgba(100, 92, 255, 0.3); /* Adding shadow */
-  border-radius: 10px; /* Optional: rounded corners for a modern look */
-  transition: box-shadow 0.3s ease; /* Smooth shadow transition on hover */
+  background-color: #fff; 
+  box-shadow: 0 4px 10px rgba(100, 92, 255, 0.3); 
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease; 
 }
-/* Hover effect for a stronger shadow */
 .projectCards:hover {
   box-shadow: 0 8px 20px rgba(100, 92, 255, 0.5);
 }
@@ -410,14 +409,14 @@ header h2 {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 15px;
+  width: 100%;
 }
 .footerContent {
-  width: 300px;
-  height: 275px;
+  width: 200px;
 }
 
 .footerHr {
-  margin: 1.5rem auto;
+  margin: 1rem auto;
   width: 70%;
   background-color: var(--text-color-);
   height: 1px;
@@ -426,10 +425,13 @@ header h2 {
 .footerContact h3 {
   font-family: var(--CINZEL-font-);
   text-align: center;
-  margin-bottom: 5px;
+  font-size: 15px;
 }
 .footerSocial i {
   font-size: 29px;
+}
+.footerContent h1{
+  margin: 2rem 0 1rem 0 !important;
 }
 .links {
   font-size: 20px;
@@ -441,8 +443,10 @@ header h2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  white-space: nowrap;
 }
 .footerLogo{
+  position: absolute;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -454,15 +458,12 @@ header h2 {
   text-align: center;
   padding: 15px 0;
   font-size: 14px;
-  font-family: var(--CINZEL-font-);
+  font-family: var(--Libre-font-);
 }
 
 @media (max-width: 768px) {
   .navLinks {
     width: 100%;
-  }
-  header h2 {
-    transform: translateX(-50%);
   }
   .menu h1 {
     display: none;
@@ -471,6 +472,18 @@ header h2 {
     margin: 1rem 0;
     width: 2.5rem;
   }
+  header h2 {
+    width: 200px;
+    top: 1rem;
+    right: 5.5rem;
+  }
+  .links li a{
+    font-size: 15px;
+  }
+  
+  /* .copyright{
+    font-size: 10px ;
+  } */
 }
 @media (max-width: 450px) {
   .slider {
