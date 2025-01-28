@@ -571,18 +571,68 @@ textarea{
 
 /* === Footer Plan === */
 .footer {
-  text-align: center;
-  padding: 1rem;}
-
-.footer-line {
-  width: 70%;
-  margin: 0 auto; /* Centers the line horizontally */
-  border: none; /* Remove default border styling */
-  border-top: 1px solid var(--text-color-); /* Custom line styling */
+  background-color: var(--orange-color-);
+}
+.footerDiv {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+  width: 100%;
+}
+.footerContent {
+  width: 200px;
 }
 
+.footerHr {
+  margin: 1rem auto;
+  width: 70%;
+  background-color: var(--text-color-);
+  height: 1px;
+  border: none;
+}
+.footerContact{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+.footerContact h3 {
+  font-family: var(--CINZEL-font-);
+  text-align: center;
+}
+.footerSocial i {
+  font-size: 29px;
+}
+.footerContent h1{
+  margin: 2rem 0 1rem 0 !important;
+}
+.links {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-family: var(--CINZEL-font-);
+  padding: 0 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  white-space: nowrap;
+}
+.footerLogo{
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.footerLogo img{
+  width: 200px;
+}
 .copyright {
-  margin-top: 1rem; /* Space between the line and the text */
+  text-align: center;
+  padding: 15px 0;
   font-size: 14px;
-  color: var(--text-color-); /* Muted text color */
+  font-family: var(--Libre-font-);
 }
