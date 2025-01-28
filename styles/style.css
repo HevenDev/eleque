@@ -1,0 +1,415 @@
+@font-face {
+  font-family: "Cinzel";
+  src: url("/fonts/Cinzel-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("/fonts/LibreBaskerville-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --CINZEL-font-: "Cinzel", serif;
+  --Libre-font-: "Libre Baskerville", serif;
+  --Roboto-font-: "Roboto", serif;
+  /* === Color pallete === */
+  --primary-color-: #f0f0f0;
+  --text-color-: #1f1f1f;
+  --royal-lightBlue-color-: #d2d0ff;
+  --royal-darkBlue-color-: #645cff;
+}
+/* Apply to all scrollable elements */
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--royal-lightBlue-color-); /* Lighter shade of #0fe4a6 */
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--royal-darkBlue-color-); /* Scrollbar color */
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--royal-darkBlue-color-); /* Darker shade on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-color: var(--royal-darkBlue-color-) var(--royal-lightBlue-color-);
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--primary-color-dark-);
+  color: var(--text-color-);
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color-);
+}
+li {
+  list-style: none;
+}
+img,
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+button {
+  cursor: pointer;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+h1 {
+  font-size: 25px;
+  font-family: var(--CINZEL-font-);
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+p {
+  font-size: 18px;
+  text-align: center;
+  font-family: var(--CINZEL-font-);
+}
+header {
+  position: fixed;
+  z-index: 8;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
+}
+.slider {
+  margin: 2rem 2rem 0 2rem;
+}
+.slider div {
+  width: 95%;
+  height: 550px;
+  margin: auto;
+  margin-right: 10px;
+}
+.homeMain {
+  width: 100%;
+  height: 100vh;
+}
+.nav-active {
+  background-color: var(--royal-lightBlue-color-);
+}
+header h2 {
+  font-size: 29px;
+  font-family: var(--CINZEL-font-);
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.menu i {
+  font-size: 19px;
+  padding-left: 1rem;
+}
+.navLinks {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 400px;
+  background-color: var(--royal-lightBlue-color-);
+  font-size: 20px;
+  font-family: var(--CINZEL-font-);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+.navLinks.active {
+  transform: translateX(0);
+}
+.closeMenu {
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.menuHead {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* ==== About ==== */
+.aboutSection,
+.wwdSection,
+.projectsSection,
+.footer {
+  padding: 1rem 2rem;
+}
+.aboutDiv,
+.locationDiv,
+.wwdDiv,
+.projectDiv,
+.footerSocial {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+}
+.aboutImg {
+  width: 490px;
+  height: 500px;
+}
+.aboutInfo {
+  width: 490px;
+}
+.aboutInfo h2 {
+  font-family: var(--CINZEL-font-);
+  font-size: 25px;
+  font-weight: 400;
+}
+.aboutInfo p {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  text-align: start;
+  padding: 1.5rem 0;
+}
+.aboutBtn {
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  background-color: var(--royal-lightBlue-color-);
+  font-family: var(--CINZEL-font-);
+}
+/* ===Location=== */
+.locationImg {
+  width: 380px;
+  height: 380px;
+  box-shadow: 0px 8px 16px rgba(100, 92, 255, 0.3);
+  border-radius: 8px; /* Optional, for a smoother look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.locationImg:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 16px 32px rgba(100, 92, 255, 0.5);
+}
+.locationImg h3,
+.wwdImg h3 {
+  font-size: 18px;
+  font-family: var(--CINZEL-font-);
+  font-weight: 500;
+  text-align: center;
+  padding: 0.5rem 0;
+  letter-spacing: 1px;
+}
+.locationBtnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 3rem;
+}
+.locationBtn {
+  padding: 6px 12px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  font-family: var(--CINZEL-font-);
+  background-color: var(--royal-lightBlue-color-);
+}
+/* ===wwd=== */
+.wwdImg {
+  width: 380px;
+  height: 400px;
+  box-shadow: 0px 8px 16px rgba(100, 92, 255, 0.3);
+  border-radius: 8px; /* Optional, for a smoother look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wwdImg:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 16px 32px rgba(100, 92, 255, 0.5);
+}
+
+.wwdDiv {
+  padding: 1.5rem 0;
+}
+
+/* ===Project=== */
+.projectCards {
+  position: relative;
+  height: 450px;
+  width: 350px;
+  background-color: #fff; /* Optional: to make it stand out */
+  box-shadow: 0 4px 10px rgba(100, 92, 255, 0.3); /* Adding shadow */
+  border-radius: 10px; /* Optional: rounded corners for a modern look */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition on hover */
+}
+/* Hover effect for a stronger shadow */
+.projectCards:hover {
+  box-shadow: 0 8px 20px rgba(100, 92, 255, 0.5);
+}
+.pCardImg {
+  margin: 0.5rem;
+  width: calc(100% - 1rem);
+  height: 200px;
+}
+.projectCards h2 {
+  padding: 1.5rem 1rem;
+  font-family: var(--CINZEL-font-);
+}
+.projectCards p {
+  padding: 0 1rem;
+  text-align: start;
+  font-size: 14px;
+}
+.pCardBtn {
+  position: absolute;
+  bottom: 0.7rem;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  font-family: var(--CINZEL-font-);
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 19px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--royal-lightBlue-color-);
+}
+/* ===Footer=== */
+.footer {
+  background-color: var(--royal-darkBlue-color-);
+  color: var(--primary-color-) !important;
+}
+.footerDiv {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+}
+.footerContent {
+  width: 300px;
+  height: 250px;
+  color: var(--primary-color-) !important;
+}
+
+.footerHr {
+  margin: 1.5rem auto;
+  width: 70%;
+  background-color: var(--royal-lightBlue-color-);
+  height: 1px;
+  border: none;
+}
+.footerContact h3 {
+  font-family: var(--CINZEL-font-);
+  text-align: center;
+  color: var(--primary-color-) !important;
+  margin-bottom: 5px;
+}
+.footerSocial i {
+  font-size: 29px;
+  color: var(--primary-color-) !important;
+}
+.links {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-family: var(--CINZEL-font-);
+  padding: 0 1.5rem;
+  text-align: center;
+}
+.links li a {
+  color: var(--primary-color-) !important;
+}
+.copyright {
+  color: var(--primary-color-);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  font-family: var(--CINZEL-font-);
+}
+
+@media (max-width: 450px) {
+  .navLinks {
+    width: 100%;
+  }
+  .slider {
+    margin: 2rem 0 0 0;
+  }
+  .slider div {
+    width: 100%;
+    height: 400px;
+    margin-right: 10px;
+  }
+  .aboutSection,
+  .wwdSection,
+  .projectsSection,
+  .footer {
+    padding: 1rem 1rem;
+  }
+  .aboutImg {
+    height: 400px;
+  }
+  .locationImg {
+    width: 300px;
+    height: 300px;
+  }
+  .projectCards{
+    height: 475px;
+  }
+  .menu h1{
+    display: none;
+  }
+  .menu i{
+    margin: 2rem 0;
+  }
+}
