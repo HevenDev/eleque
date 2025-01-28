@@ -329,10 +329,21 @@ header h2 {
 }
 /* === Contact === */
 .contactSection{
-  padding: 1.5rem 2rem;
+  position: relative;
+  margin: 1.5rem 0;
   width: 100%;
   height: 550px;
   background-color: #645cff;
+  z-index: 3;
+}
+.contactSection::before{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #000;
+z-index: 4;
 }
 /* ===Footer=== */
 .footer {
