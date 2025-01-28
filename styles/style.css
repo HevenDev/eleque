@@ -326,8 +326,7 @@ header h2 {
 }
 /* ===Footer=== */
 .footer {
-  background-color: var(--royal-darkBlue-color-);
-  color: var(--primary-color-) !important;
+  background-color: var(--royal-lightBlue-color-);
 }
 .footerDiv {
   display: flex;
@@ -339,25 +338,22 @@ header h2 {
 .footerContent {
   width: 300px;
   height: 250px;
-  color: var(--primary-color-) !important;
 }
 
 .footerHr {
   margin: 1.5rem auto;
   width: 70%;
-  background-color: var(--royal-lightBlue-color-);
+  background-color: var(--royal-darkBlue-color-);
   height: 1px;
   border: none;
 }
 .footerContact h3 {
   font-family: var(--CINZEL-font-);
   text-align: center;
-  color: var(--primary-color-) !important;
   margin-bottom: 5px;
 }
 .footerSocial i {
   font-size: 29px;
-  color: var(--primary-color-) !important;
 }
 .links {
   font-size: 20px;
@@ -368,10 +364,8 @@ header h2 {
   text-align: center;
 }
 .links li a {
-  color: var(--primary-color-) !important;
 }
 .copyright {
-  color: var(--primary-color-);
   text-align: center;
   padding: 15px 0;
   font-size: 14px;
