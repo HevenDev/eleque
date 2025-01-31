@@ -1,0 +1,155 @@
+@media (max-width: 1024px) {
+  .popupImg{
+    display: none;
+  }
+  .popupForm{
+    width: 300px;
+  }
+}
+@media (max-width: 550px) {
+  .logo a{
+    margin-left: 1rem;
+    font-size: 35px;
+  }
+  .enquiry{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .enquiry button{
+    width: 100%;
+    border-radius: 0;
+  }
+  .menuBar{
+    margin: 1rem 1rem 1rem 0;
+  }
+  .header{
+    background-color: #fff;
+  }
+  .headerNav ul{
+    width: 100%;
+  }
+  .headerNav ul img{
+    transform: translateX(calc(50%));
+  }
+  .overviewHeading, .amenitiesHeading,.highlightHeading, .floorPlanHeading, .galleryHeading, .locatingHeading, .aboutHeading{
+    font-size: 23px;
+  }
+  .overviewSection, .amenitiesSection, .locationMap{
+    padding: 1rem 1rem;
+  }
+  .overviewPara, .overviewImg, .highlightsImg, .highlightsPara{
+    width: 300px;
+    height: 100%;
+  }
+  .amenitiesImg, .galleryImg{
+    width: 300px;
+  }
+  .a-g-bigImg{
+    height: auto;
+  }
+  .floorPlans{
+    width: 300px;
+    height: 400px;
+  }
+  .locationPara, .aboutHeadPara, .galleryPara{
+    width: 90%;
+  }
+  .aboutPara{
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .navLinks {
+    width: 100%;
+  }
+
+  .menu h1 {
+    display: none;
+  }
+
+  .menu img {
+    margin: 1rem 0;
+    width: 2.5rem;
+  }
+
+  header h2 {
+    width: 160px;
+    top: 1rem;
+    right: 5.5rem;
+  }
+
+  .links li a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  p {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .slider {
+    margin: 2rem 0 0 0;
+  }
+
+  .slider div {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  .aboutSection,
+  .wwdSection,
+  .projectsSection {
+    padding: 1rem 1rem;
+  }
+
+  .aboutImg {
+    height: 400px;
+  }
+
+  .locationImg {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .projectCards {
+    height: 475px;
+  }
+
+  .popupForm h2 {
+    color: #000;
+    font-size: 20px;
+  }
+
+  .closeMenu {
+    left: 2rem;
+  }
+
+  .menuHead {
+    display: none;
+  }
+
+  .locationBtnDiv {
+    margin-top: 3rem;
+  }
+
+  .submitForm {
+    width: 50% !important;
+  }
+
+  .wwdImg {
+    height: 500px !important;
+  }
+
+  .footerContact {
+    font-size: 12px;
+  }
+
+  .footerDiv {
+    padding-top: 3rem !important;
+  }
+}

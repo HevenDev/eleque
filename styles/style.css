@@ -1,0 +1,923 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("/fonts/HeroLight-Light.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --CINZEL-font-: "Playfair Display", serif;
+  --Libre-font-: "Libre Baskerville", serif;
+  --Roboto-font-: "Roboto", serif;
+  /* === Color pallete === */
+  --primary-color-: #f0f0f0;
+  --text-color-: #ffffff;
+  --royal-lightBlue-color-: #43ba90;
+  --royal-darkBlue-color-: #645cff;
+  --primary-color-dark-: #373643;
+}
+
+/* Apply to all scrollable elements */
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  /* Lighter shade of #0fe4a6 */
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--royal-lightBlue-color-);
+  /* Scrollbar color */
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--royal-lightBlue-color-);
+  /* Darker shade on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-color: var(--royal-lightBlue-color-) transparent;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--primary-color-dark-);
+  color: var(--text-color-);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-);
+}
+
+li {
+  list-style: none;
+}
+
+img,
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  resize: none;
+}
+
+.aboutInfo h1 {
+  text-align: start !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: var(--CINZEL-font-);
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+  font-family: var(--Libre-font-);
+  /* margin: 1rem; */
+}
+
+header {
+  position: fixed;
+  z-index: 8;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* ===Popup=== */
+.popup {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background: #00000072;
+  visibility: hidden;
+  /* Use visibility instead of display */
+  opacity: 0;
+  /* Start with 0 opacity */
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.popup-active {
+  visibility: visible;
+  /* Show element */
+  opacity: 1;
+  /* Fade in */
+}
+
+.parentPopup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  transform: translateY(-50px);
+  /* Start off-screen */
+  opacity: 0;
+  /* Start with 0 opacity */
+  visibility: hidden;
+  /* Use visibility instead of display */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.parentPopup-active {
+  visibility: visible;
+  /* Show element */
+  transform: translateY(0);
+  /* Slide into position */
+  opacity: 1;
+  /* Fade in */
+}
+
+.popupDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popupImg,
+.popupForm {
+  width: 450px;
+  height: 500px;
+}
+
+.closeBtn {
+  top: 0.7rem;
+  right: 1.2rem;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.c-bars {
+  width: 100%;
+  height: 3px;
+  background: #000;
+
+}
+
+.c-bar1 {
+  transform: rotateZ(45deg);
+}
+
+.c-bar2 {
+  transform: rotateZ(-45deg);
+}
+
+.popupForm {
+  border: 1px solid var(--orange-color-);
+}
+
+.popupForm h2 {
+  font-family: var(--CINZEL-font-);
+  font-size: 30px;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+.popupForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 1rem 2rem;
+}
+
+.popupForm form input,
+.popupForm form textarea {
+  padding: 10px 1rem;
+  font-size: 17px;
+  font-family: var(--Libre-font-);
+  background-color: rgb(220, 232, 226);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+.formError{
+  color: #000;
+}
+/* ===About=== */
+.slider {
+  margin: 2rem 2rem 0 2rem;
+}
+
+.slider div {
+  width: 95%;
+  margin: auto;
+  margin-right: 10px;
+}
+
+.slick-next,
+.slick-prev {
+  display: none !important;
+}
+
+.slick-dots li button:before {
+  color: #fff !important;
+  font-size: 10px !important;
+}
+
+.homeMain {
+  width: 100%;
+  height: 100vh;
+}
+
+h2 a img:first-child {
+  display: block;
+}
+
+h2 a img:last-child {
+  display: none;
+}
+
+/* When .nav-fixed is added, swap the logos */
+.nav-active h2 a img:first-child {
+  display: none;
+}
+
+.nav-active h2 a img:last-child {
+  display: block;
+}
+
+.nav-active {
+  background-color: var(--royal-lightBlue-color-);
+  height: 70px;
+}
+
+header h2 {
+  position: absolute;
+  font-size: 29px;
+  font-family: var(--CINZEL-font-);
+  font-weight: 600;
+  right: 50%;
+  transform: translateX(50%);
+  display: inline;
+  /* top: 1.2rem; */
+  width: 180px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu i {
+  font-size: 19px;
+  padding-left: 1.5rem;
+}
+
+.menu img {
+  width: 50px;
+  height: 50px;
+}
+
+.navLinks {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 400px;
+  background-color: var(--royal-lightBlue-color-);
+  font-size: 20px;
+  font-family: var(--CINZEL-font-);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
+  /* Shadow to the right */
+}
+
+.navLinks.active {
+  transform: translateX(0);
+}
+
+.closeMenu {
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.menuHead {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ==== About ==== */
+.aboutSection,
+.wwdSection,
+.projectsSection {
+  padding: 1rem 2rem;
+}
+
+.aboutDiv,
+.locationDiv,
+.wwdDiv,
+.projectDiv,
+.footerSocial {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+  margin-top: 1rem;
+}
+
+.aboutImg {
+  width: 490px;
+  height: 500px;
+}
+
+.aboutInfo {
+  width: 490px;
+}
+
+.aboutInfo h2 {
+  font-family: var(--CINZEL-font-);
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.aboutInfo p {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  text-align: start;
+  padding: 1.5rem 0;
+}
+
+.aboutBtn {
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  background-color: var(--royal-lightBlue-color-);
+  font-family: var(--CINZEL-font-);
+}
+
+.aboutBtn:hover {
+  transform: translateY(-8px);
+}
+
+/* ===Location=== */
+.locationImg {
+  width: 380px;
+  height: 380px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  /* Optional, for a smoother look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.locationImg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  /* Initially transparent */
+  transition: background 0.3s ease-in-out;
+}
+
+.locationImg button {
+  padding: 6px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--Libre-font-);
+  background-color: var(--royal-lightBlue-color-);
+}
+
+.locationImg .locationContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.locationImg:hover::after {
+  background: rgba(0, 0, 0, 0.7);
+  /* Dark overlay on hover */
+}
+
+.locationImg:hover .locationContent {
+  opacity: 1;
+  /* Show text on hover */
+}
+
+/* .locationImg:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.5);
+} */
+
+.locationImg h3,
+.wwdImg h3 {
+  font-size: 18px;
+  font-family: var(--Libre-font-);
+  font-weight: 500;
+  text-align: center;
+  padding: 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.locationContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.locationContent li {
+  font-family: var(--Libre-font-);
+  padding: 0.5rem;
+  font-size: 16px;
+  text-align: center;
+}
+
+.locationBtnDiv {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.locationBtn {
+  padding: 6px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--Libre-font-);
+  background-color: var(--royal-lightBlue-color-);
+  margin-top: 1rem;
+}
+
+/* ===wwd=== */
+.wwdImg {
+  width: 380px;
+  height: 600px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  /* Optional, for a smoother look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* .wwdImg:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.5);
+} */
+
+.wwdSection>p {
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.wwdDiv {
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.wwdImg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  /* Initially transparent */
+  transition: background 0.3s ease-in-out;
+}
+.wwdcontent p{
+  padding: 0 1.5rem;
+  font-size: 16px;
+}
+.wwdImg .wwdcontent {
+  position: absolute;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.wwdcontent button {
+  padding: 6px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--Libre-font-);
+  background-color: var(--royal-lightBlue-color-);
+  white-space: nowrap;
+  margin-top: 1rem;
+}
+
+.wwdImg:hover::after {
+  background: rgba(0, 0, 0, 0.7);
+  /* Dark overlay on hover */
+}
+
+.wwdImg:hover .wwdcontent {
+  opacity: 1;
+  /* Show text on hover */
+}
+
+/* ===Project=== */
+.projectCards {
+  position: relative;
+  height: 450px;
+  width: 350px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(100, 92, 255, 0.3);
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.projectCards:hover {
+  box-shadow: 0 8px 20px rgba(100, 92, 255, 0.5);
+}
+
+.pCardImg {
+  margin: 0.5rem;
+  width: calc(100% - 1rem);
+  height: 200px;
+}
+
+.projectCards h2 {
+  padding: 1.5rem 1rem;
+  font-family: var(--CINZEL-font-);
+}
+
+.projectCards p {
+  padding: 0 1rem;
+  text-align: start;
+  font-size: 14px;
+}
+
+.pCardBtn {
+  position: absolute;
+  bottom: 0.7rem;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  font-family: var(--CINZEL-font-);
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 19px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--royal-lightBlue-color-);
+}
+
+/* === Contact === */
+.contactSection {
+  position: relative;
+  margin: 1.5rem 0;
+  width: 100%;
+  height: 550px;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.contactSection img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.contactSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.contactForm {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.contactForm h1 {
+  margin-top: 4rem;
+  font-size: 29px;
+  color: var(--primary-color-);
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 6px 9px;
+  font-size: 19px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--royal-lightBlue-color-);
+  font-family: var(--CINZEL-font-);
+  width: 60%;
+  color: var(--primary-color-);
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: var(--primary-color-);
+}
+
+.submitForm {
+  font-size: 19px !important;
+  background-color: var(--royal-lightBlue-color-) !important;
+  color: var(--text-color-) !important;
+  width: 50% !important;
+  cursor: pointer;
+}
+
+/* ===Footer=== */
+.footerDiv {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.footerContent {
+  width: 200px;
+  font-size: 14px;
+}
+
+.footerBg {
+  position: absolute;
+  z-index: -1;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.footerHr {
+  margin: 1rem auto;
+  width: 70%;
+  background-color: var(--text-color-);
+  height: 1px;
+  border: none;
+}
+
+.footerContact {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footerContact h3 {
+  font-family: var(--Libre-font-);
+  text-align: start;
+  margin-top: 1rem;
+}
+
+.footerSocial i {
+  font-size: 29px;
+}
+
+.footerContent h1 {
+  margin: 2rem 0 1rem 0 !important;
+  text-align: start !important;
+}
+
+.links {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-family: var(--Libre-font-);
+  /* padding: 0 1.5rem; */
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.footerLogo {
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  top: 20px;
+}
+
+.footerLogo img {
+  width: 200px;
+}
+
+.copyright {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  font-family: var(--Libre-font-);
+}
+.popup-div{
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background: #00000072;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+/* @media (max-width: 768px) {
+  .navLinks {
+    width: 100%;
+  }
+
+  .menu h1 {
+    display: none;
+  }
+
+  .menu img {
+    margin: 1rem 0;
+    width: 2.5rem;
+  }
+
+  header h2 {
+    width: 160px;
+    top: 1rem;
+    right: 5.5rem;
+  }
+
+  .links li a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  p {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .slider {
+    margin: 2rem 0 0 0;
+  }
+
+  .slider div {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  .aboutSection,
+  .wwdSection,
+  .projectsSection {
+    padding: 1rem 1rem;
+  }
+
+  .aboutImg {
+    height: 400px;
+  }
+
+  .locationImg {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .projectCards {
+    height: 475px;
+  }
+
+  .popupForm h2 {
+    color: #000;
+    font-size: 20px;
+  }
+
+  .closeMenu {
+    left: 2rem;
+  }
+
+  .menuHead {
+    display: none;
+  }
+
+  .locationBtnDiv {
+    margin-top: 3rem;
+  }
+
+  .submitForm {
+    width: 50% !important;
+  }
+
+  .wwdImg {
+    height: 500px !important;
+  }
+
+  .footerContact {
+    font-size: 12px;
+  }
+
+  .footerDiv {
+    padding-top: 3rem !important;
+  }
+} */
