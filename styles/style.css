@@ -1,122 +1,6 @@
-@font-face {
-  font-family: "Playfair Display";
-  src: url("/fonts/PlayfairDisplay-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Libre Baskerville";
-  src: url("/fonts/HeroLight-Light.otf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto-Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --CINZEL-font-: "Playfair Display", serif;
-  --Libre-font-: "Libre Baskerville", serif;
-  --Roboto-font-: "Roboto", serif;
-  /* === Color pallete === */
-  --primary-color-: #f0f0f0;
-  --text-color-: #ffffff;
-  --royal-lightBlue-color-: #43ba90;
-  --royal-darkBlue-color-: #645cff;
-  --primary-color-dark-: #373643;
-}
-
-/* Apply to all scrollable elements */
-*::-webkit-scrollbar {
-  width: 20px;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-  /* Lighter shade of #0fe4a6 */
-  border-radius: 5px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: var(--royal-lightBlue-color-);
-  /* Scrollbar color */
-  border-radius: 5px;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background: var(--royal-lightBlue-color-);
-  /* Darker shade on hover */
-}
-
-/* For Firefox */
-* {
-  scrollbar-color: var(--royal-lightBlue-color-) transparent;
-}
-
-body {
-  overflow-x: hidden;
-  background-color: var(--primary-color-dark-);
-  color: var(--text-color-);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  color: var(--text-color-);
-}
-
-li {
-  list-style: none;
-}
-
-img,
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-button,
-input,
-textarea {
-  border: none;
-  outline: none;
-  box-shadow: none;
-  resize: none;
-}
-
-.aboutInfo h1 {
-  text-align: start !important;
-}
-
-button {
-  cursor: pointer;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 h1 {
   font-size: 2rem;
-  font-family: var(--CINZEL-font-);
+  font-family: var(--Playfair-font-);
   text-align: center;
   margin: 2rem 0;
   font-weight: 500;
@@ -130,142 +14,6 @@ p {
   /* margin: 1rem; */
 }
 
-header {
-  position: fixed;
-  z-index: 8;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
-  background-color: transparent;
-  transition: background-color 0.2s ease-in-out;
-}
-
-/* ===Popup=== */
-.popup {
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 100vh;
-  background: #00000072;
-  visibility: hidden;
-  /* Use visibility instead of display */
-  opacity: 0;
-  /* Start with 0 opacity */
-  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-}
-
-.popup-active {
-  visibility: visible;
-  /* Show element */
-  opacity: 1;
-  /* Fade in */
-}
-
-.parentPopup {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  background-color: #fff;
-  padding: 0.5rem 1rem;
-  transform: translateY(-50px);
-  /* Start off-screen */
-  opacity: 0;
-  /* Start with 0 opacity */
-  visibility: hidden;
-  /* Use visibility instead of display */
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-}
-
-.parentPopup-active {
-  visibility: visible;
-  /* Show element */
-  transform: translateY(0);
-  /* Slide into position */
-  opacity: 1;
-  /* Fade in */
-}
-
-.popupDiv {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.popupImg,
-.popupForm {
-  width: 450px;
-  height: 500px;
-}
-
-.closeBtn {
-  top: 0.7rem;
-  right: 1.2rem;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #ffffff;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.c-bars {
-  width: 100%;
-  height: 3px;
-  background: #000;
-
-}
-
-.c-bar1 {
-  transform: rotateZ(45deg);
-}
-
-.c-bar2 {
-  transform: rotateZ(-45deg);
-}
-
-.popupForm {
-  border: 1px solid var(--orange-color-);
-}
-
-.popupForm h2 {
-  font-family: var(--CINZEL-font-);
-  font-size: 30px;
-  text-align: center;
-  padding: 1.5rem 0;
-  font-weight: 400;
-  letter-spacing: 1px;
-  color: #000;
-}
-
-.popupForm form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 1rem 2rem;
-}
-
-.popupForm form input,
-.popupForm form textarea {
-  padding: 10px 1rem;
-  font-size: 17px;
-  font-family: var(--Libre-font-);
-  background-color: rgb(220, 232, 226);
-  letter-spacing: 1.5px;
-  font-weight: 700;
-}
-.formError{
-  color: #000;
-}
 /* ===About=== */
 .slider {
   margin: 2rem 2rem 0 2rem;
@@ -290,97 +38,6 @@ header {
 .homeMain {
   width: 100%;
   height: 100vh;
-}
-
-h2 a img:first-child {
-  display: block;
-}
-
-h2 a img:last-child {
-  display: none;
-}
-
-/* When .nav-fixed is added, swap the logos */
-.nav-active h2 a img:first-child {
-  display: none;
-}
-
-.nav-active h2 a img:last-child {
-  display: block;
-}
-
-.nav-active {
-  background-color: var(--royal-lightBlue-color-);
-  height: 70px;
-}
-
-header h2 {
-  position: absolute;
-  font-size: 29px;
-  font-family: var(--CINZEL-font-);
-  font-weight: 600;
-  right: 50%;
-  transform: translateX(50%);
-  display: inline;
-  /* top: 1.2rem; */
-  width: 180px;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.menu i {
-  font-size: 19px;
-  padding-left: 1.5rem;
-}
-
-.menu img {
-  width: 50px;
-  height: 50px;
-}
-
-.navLinks {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 400px;
-  background-color: var(--royal-lightBlue-color-);
-  font-size: 20px;
-  font-family: var(--CINZEL-font-);
-  transform: translateX(-100%);
-  transition: transform 0.4s ease-in-out;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
-  /* Shadow to the right */
-}
-
-.navLinks.active {
-  transform: translateX(0);
-}
-
-.closeMenu {
-  font-size: 40px;
-  cursor: pointer;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-}
-
-.menuHead {
-  font-size: 30px;
-  cursor: pointer;
-  position: absolute;
-  top: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* ==== About ==== */
@@ -412,10 +69,8 @@ header h2 {
   width: 490px;
 }
 
-.aboutInfo h2 {
-  font-family: var(--CINZEL-font-);
-  font-size: 25px;
-  font-weight: 400;
+.aboutInfo h1 {
+  text-align: start;
 }
 
 .aboutInfo p {
@@ -430,8 +85,8 @@ header h2 {
 .aboutBtn {
   padding: 0.5rem 1rem;
   font-size: 20px;
-  background-color: var(--royal-lightBlue-color-);
-  font-family: var(--CINZEL-font-);
+  background-color: var(--secondary-color-);
+  font-family: var(--Playfair-font-);
 }
 
 .aboutBtn:hover {
@@ -467,7 +122,7 @@ header h2 {
   font-size: 20px;
   font-weight: 600;
   font-family: var(--Libre-font-);
-  background-color: var(--royal-lightBlue-color-);
+  background-color: var(--secondary-color-);
 }
 
 .locationImg .locationContent {
@@ -533,7 +188,7 @@ header h2 {
   font-size: 20px;
   font-weight: 600;
   font-family: var(--Libre-font-);
-  background-color: var(--royal-lightBlue-color-);
+  background-color: var(--secondary-color-);
   margin-top: 1rem;
 }
 
@@ -600,7 +255,7 @@ header h2 {
   font-size: 20px;
   font-weight: 600;
   font-family: var(--Libre-font-);
-  background-color: var(--royal-lightBlue-color-);
+  background-color: var(--secondary-color-);
   white-space: nowrap;
   margin-top: 1rem;
 }
@@ -638,7 +293,7 @@ header h2 {
 
 .projectCards h2 {
   padding: 1.5rem 1rem;
-  font-family: var(--CINZEL-font-);
+  font-family: var(--Playfair-font-);
 }
 
 .projectCards p {
@@ -652,13 +307,13 @@ header h2 {
   bottom: 0.7rem;
   margin: 1rem 0;
   padding: 0.5rem 1rem;
-  font-family: var(--CINZEL-font-);
+  font-family: var(--Playfair-font-);
   white-space: nowrap;
   font-weight: 500;
   font-size: 19px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--royal-lightBlue-color-);
+  background-color: var(--secondary-color-);
 }
 
 /* === Contact === */
@@ -710,8 +365,8 @@ header h2 {
   padding: 6px 9px;
   font-size: 19px;
   background-color: transparent;
-  border-bottom: 1px solid var(--royal-lightBlue-color-);
-  font-family: var(--CINZEL-font-);
+  border-bottom: 1px solid var(--secondary-color-);
+  font-family: var(--Playfair-font-);
   width: 60%;
   color: var(--primary-color-);
 }
@@ -721,113 +376,6 @@ header h2 {
   color: var(--primary-color-);
 }
 
-.submitForm {
-  font-size: 19px !important;
-  background-color: var(--royal-lightBlue-color-) !important;
-  color: var(--text-color-) !important;
-  width: 50% !important;
-  cursor: pointer;
-}
-
-/* ===Footer=== */
-.footerDiv {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 15px;
-  width: 100%;
-  padding-top: 2rem;
-}
-
-.footerContent {
-  width: 200px;
-  font-size: 14px;
-}
-
-.footerBg {
-  position: absolute;
-  z-index: -1;
-}
-
-.footer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.footerHr {
-  margin: 1rem auto;
-  width: 70%;
-  background-color: var(--text-color-);
-  height: 1px;
-  border: none;
-}
-
-.footerContact {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.footerContact h3 {
-  font-family: var(--Libre-font-);
-  text-align: start;
-  margin-top: 1rem;
-}
-
-.footerSocial i {
-  font-size: 29px;
-}
-
-.footerContent h1 {
-  margin: 2rem 0 1rem 0 !important;
-  text-align: start !important;
-}
-
-.links {
-  font-size: 20px;
-  letter-spacing: 2px;
-  font-weight: 600;
-  font-family: var(--Libre-font-);
-  /* padding: 0 1.5rem; */
-  text-align: start;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  white-space: nowrap;
-}
-
-.footerLogo {
-  position: absolute;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  top: 20px;
-}
-
-.footerLogo img {
-  width: 200px;
-}
-
-.copyright {
-  text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
-  font-family: var(--Libre-font-);
-}
-.popup-div{
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 100vh;
-  background: #00000072;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-}
 /* @media (max-width: 768px) {
   .navLinks {
     width: 100%;

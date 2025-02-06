@@ -1,11 +1,4 @@
-@media (max-width: 1024px) {
-  .popupImg{
-    display: none;
-  }
-  .popupForm{
-    width: 300px;
-  }
-}
+
 @media (max-width: 550px) {
   .logo a{
     margin-left: 1rem;
@@ -60,36 +53,9 @@
     width: 100%;
   }
 }
-@media (max-width: 768px) {
-  .navLinks {
-    width: 100%;
-  }
 
-  .menu h1 {
-    display: none;
-  }
-
-  .menu img {
-    margin: 1rem 0;
-    width: 2.5rem;
-  }
-
-  header h2 {
-    width: 160px;
-    top: 1rem;
-    right: 5.5rem;
-  }
-
-  .links li a {
-    font-size: 15px;
-  }
-}
 
 @media (max-width: 450px) {
-  p {
-    font-size: 14px;
-    margin-bottom: 1rem;
-  }
 
   .slider {
     margin: 2rem 0 0 0;
@@ -120,36 +86,12 @@
     height: 475px;
   }
 
-  .popupForm h2 {
-    color: #000;
-    font-size: 20px;
-  }
-
-  .closeMenu {
-    left: 2rem;
-  }
-
-  .menuHead {
-    display: none;
-  }
-
   .locationBtnDiv {
     margin-top: 3rem;
-  }
-
-  .submitForm {
-    width: 50% !important;
   }
 
   .wwdImg {
     height: 500px !important;
   }
 
-  .footerContact {
-    font-size: 12px;
-  }
-
-  .footerDiv {
-    padding-top: 3rem !important;
-  }
 }

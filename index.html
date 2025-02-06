@@ -1,290 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Eleque estates" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/media.css" />
+    <link rel="stylesheet" href="/styles/common.css" />
+    <link rel="icon" href="/images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/4c90fc44ba.js"
+      crossorigin="anonymous"
+      async
+    ></script>
+    <title>Eleque – Where Innovation Meets Real Estate</title>
+    <link rel="preload" as="image" href="/images/logo.png" type="image/jpeg" />
+    <link rel="preload" as="image" href="/images/logo1.png" type="image/jpeg" />
+    <!-- <link rel="preload" as="image" href="/images/Dholera1.jpg" type="image/jpeg"> -->
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eleque estates">
-  <link rel="stylesheet" href="/styles/style.css" />
-  <link rel="stylesheet" href="/styles/media.css" />
-  <link rel="icon" href="/images/favicon.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-  <script src="https://kit.fontawesome.com/4c90fc44ba.js" crossorigin="anonymous" async></script>
-  <title>Eleque</title>
-  <link rel="preload" as="image" href="/images/logo.png" type="image/jpeg">
-  <!-- <link rel="preload" as="image" href="/images/Dholera1.jpg" type="image/jpeg"> -->
-</head>
-
-<body>
-  <div id="popup" class="popup">
-    <div class="popupDiv">
-      <div class="parentPopup">
-        <div class="closeBtn">
-          <div class="c-bars c-bar1"></div>
-          <div class="c-bars c-bar2"></div>
-        </div>
-        <!-- <div class="popupImg"><img src="/images/Dholera1.jpg" alt="popup-image"></div> -->
-        <div class="popupForm">
-          <h2>Enquire Now</h2>
-          <form id="contactForm" method="POST" action="https://script.google.com/macros/s/AKfycbwA4Aghsvt74eC8RW0DOHdakyHacKCSKByuJtksa8timkFRNANqeOhR4D5nT5K_jo7U6Q/exec">
-            <input name="Client Name" type="text" placeholder="Name" required/>
-            <input name="Email" type="email" placeholder="Email" required/>
-            <input name="Phone" type="number" placeholder="Number" required/>
-            <textarea name="Message" rows="4" placeholder="Message"></textarea>
-            <p id="formError"></p>
-            <input class="submitForm" type="submit" placeholder="Submit" />
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section class="homeSection" id="home">
-    <header>
-      <div class="menu">
-        <h1>Menu</h1>
-        <img src="/images/menuIcon.svg" alt="favicon">
-      </div>
-      <ul class="navLinks">
-        <li>
-          <i class="closeMenu fa-solid fa-xmark"></i>
-          <h1 class="menuHead">Menu</h1>
-        </li>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About us</a></li>
-        <li><a href="#location">Location</a></li>
-        <li><a href="#wwd">What we do</a></li>
-        <li class="popButton"><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact us</a></li>
-      </ul>
-      <h2>
-        <a href="#home">
-          <img src="/images/logo1.png" alt="logo">
-          <img src="/images/logo.png" alt="logo">
-        </a>
-      </h2>
-    </header>
-    <main class="homeMain">
-      <video loop autoplay muted playsinline preload="auto">
-        <source src="images/web_banner_video.mp4" media="(min-width: 768px)" type="video/mp4">
-        <source src="images/web_banner_video_mob.mp4" media="(max-width: 767px)" type="video/mp4">
-    </video>
-    </main>
-  </section>
-  <section class="aboutSection" id="about">
-    <div class="aboutDiv">
-      <div class="aboutImg">
-        <img src="/images/aboutImg.png" alt="aboutImage" />
-      </div>
-      <div class="aboutInfo">
-        <h1>Passion at Work</h1>
-        <p>
-          Eleque Infra champions sustainable, profitable investments in
-          India’s emerging smart city landscape. Our mission is to deliver
-          transparent solutions that align with government-backed
-          infrastructure and global growth trends. By focusing on prime
-          locations within Dholera, we enable investors to tap into its vast
-          potential while ensuring a seamless, trustworthy experience—from
-          plot selection to final registration.
-        </p>
-        <button class="aboutBtn popButton">Read More</button>
-      </div>
-    </div>
-    <div class="slider">
-      <div>
-        <picture>
-          <!-- Image for screens with min-width: 768px -->
-          <source srcset="/images/aboutSlider2.png" media="(min-width: 768px)" />
-          <!-- Image for screens with max-width: 767px -->
-          <source srcset="/images/sliderMobile2.png" media="(max-width: 767px)" />
-          <!-- Fallback image -->
-          <img data-lazy="/images/aboutSlider2.png" alt="Image 1" />
-        </picture>
-      </div>
-      <div>
-        <picture>
-          <!-- Image for screens with min-width: 768px -->
-          <source srcset="/images/aboutSlider1.png" media="(min-width: 768px)" />
-          <!-- Image for screens with max-width: 767px -->
-          <source srcset="/images/sliderMobile1.png" media="(max-width: 767px)" />
-          <!-- Fallback image -->
-          <img data-lazy="/images/aboutSlider1.png" alt="Image 2" />
-        </picture>
-      </div>
-      <div>
-        <picture>
-          <!-- Image for screens with min-width: 768px -->
-          <source srcset="/images/aboutSlider3.png" media="(min-width: 768px)" />
-          <!-- Image for screens with max-width: 767px -->
-          <source srcset="/images/sliderMobile3.png" media="(max-width: 767px)" />
-          <!-- Fallback image -->
-          <img data-lazy="/images/aboutSlider3.png" alt="Image 3" />
-        </picture>
-      </div>
-    </div>
-  </section>
-  <section class="locationSection" id="location">
-    <h1>Location</h1>
-    <div class="locationDiv">
-      <!-- <a href="/dholera.html"> -->
-        <div class="locationImg popButton">
-          <div class="locationContent">
-            <p>India’s first integrated Smart City under the DMIC.</p>
-            <button>Learn more</button>
+  <body>
+    <div id="popup" class="popup">
+      <div class="popupDiv">
+        <div class="parentPopup">
+          <div class="closeBtn">
+            <div class="c-bars c-bar1"></div>
+            <div class="c-bars c-bar2"></div>
           </div>
-          <img src="/images/locationDholera.png" alt="dholera" />
-          <h3>Dholera</h3>
-        </div>
-      <!-- </a> -->
-      <div class="locationImg popButton">
-        <div class="locationContent">
-          <p>Luxurious villas and stylish studio apartments capturing beachside serenity.</p>
-          <button>Learn more</button>
-        </div>
-        <img src="/images/locationGoa.png" alt="goa" />
-        <h3>Goa</h3>
-      </div>
-      <div class="locationImg popButton">
-        <div class="locationContent">
-          <p>Modern housing solutions in the bustling economic capital.</p>
-          <button>Learn more</button>
-        </div>
-        <img src="/images/locationMumbai.png" alt="mumbai" />
-        <h3>Mumbai</h3>
-      </div>
-    </div>
-    <div class="locationBtnDiv">
-      <h1>Want to know more?</h1>
-      <p>Click to button below and fill out the details for additional information on investment opportunities.</p>
-      <button class="locationBtn popButton">Learn More</button>
-    </div>
-  </section>
-  <section class="wwdSection" id="wwd">
-    <h1>What we do</h1>
-    <p>
-      At Eleque Infra, we prioritize customer satisfaction, architectural innovation, and sustainable development. Each
-      project is meticulously planned to align with local culture and environmental considerations. Our dedicated team
-      of architects, engineers, and project managers ensures timely delivery and uncompromised quality across all our
-      ventures.
-    </p>
-    <div class="wwdDiv">
-      <div class="wwdImg popButton">
-        <div class="wwdcontent">
-          <div>
-            <p>Eleque Infra’s commercial projects are designed to accelerate business growth by providing
-              state-of-the-art infrastructure in prime locations. We meticulously plan each property with modern
-              amenities, robust connectivity, and flexible floor plans to cater to diverse enterprises. With an
-              unwavering focus on quality and innovation, we deliver spaces that drive success. </p>
-            <button>Learn more</button>
+          <!-- <div class="popupImg"><img src="/images/Dholera1.jpg" alt="popup-image"></div> -->
+          <div class="popupForm">
+            <h2>Enquire Now</h2>
+            <form
+              id="contactForm"
+              method="POST"
+              action="https://script.google.com/macros/s/AKfycbwA4Aghsvt74eC8RW0DOHdakyHacKCSKByuJtksa8timkFRNANqeOhR4D5nT5K_jo7U6Q/exec"
+            >
+              <input
+                name="Client Name"
+                type="text"
+                placeholder="Name"
+                required
+              />
+              <input name="Email" type="email" placeholder="Email" required />
+              <input name="Phone" type="number" placeholder="Number" required />
+              <textarea
+                name="Message"
+                rows="4"
+                placeholder="Message"
+              ></textarea>
+              <p id="formError"></p>
+              <input class="submitForm" type="submit" placeholder="Submit" />
+            </form>
           </div>
         </div>
-        <img src="images/commercial.png" alt="Commercial" />
-        <h3>Commercial</h3>
-      </div>
-      <div class="wwdImg popButton">
-        <div class="wwdcontent">
-          <div>
-            <p>Eleque Infra’s residential projects embrace designs and contemporary architecture to cater to modern
-              lifestyles. From spacious family homes to cozy urban apartments, each development emphasizes comfort,
-              safety, and community. Located in prime neighborhoods, our residences feature cutting-edge amenities and
-              seamless connectivity, ensuring a balanced, vibrant living experience for every homeowner.</p>
-            <button>Learn more</button>
-          </div>
-        </div>
-        <img src="images/residential.png" alt="Contracting" />
-        <h3>Residential</h3>
-      </div>
-      <div class="wwdImg popButton">
-        <div class="wwdcontent">
-          <div>
-            <p>Eleque Infra’s vacation homes seamlessly blend comfort, style, and tranquility in picturesque locations
-              like Goa. Each property features premium amenities for a hassle-free getaway, from serene poolside
-              retreats to vibrant beachside experiences. Whether as a second home or a rental investment, our vacation
-              residences offer a slice of paradise year-round. </p>
-            <button>Learn more</button>
-          </div>
-        </div>
-        <img src="images/vacation.png" alt="Manufacturing" />
-        <h3>Vaction Homes</h3>
       </div>
     </div>
-  </section>
-  <section class="contactSection" id="contact">
-    <img
-      src="https://images.unsplash.com/photo-1737587653765-94bc8fe7b541?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="visit image">
-    <form class="contactForm" action="">
-      <h1>Request a visit</h1>
-      <input type="text" placeholder="Full name">
-      <input type="email" placeholder="E-Mail">
-      <input type="number" placeholder="Number">
-      <textarea name="" rows="4" placeholder="Message" id=""></textarea>
-      <input class="submitForm" type="submit" placeholder="submit">
-
-    </form>
-  </section>
-  <footer class="footer">
-    <img class="footerBg" src="/images/footerBg.png" alt="footerBg">
-    <div class="footerLogo">
-      <a href="#home"><img src="/images/logo.png" alt="logo"></a>
-    </div>
-    <div class="footerDiv">
-      <div class="footerContent footerCities">
-        <h1>Cities</h1>
-        <ul class="links">
-          <li><a href="#home">Dholera</a></li>
-          <li><a href="#about">Mumbai</a></li>
-          <li><a href="#">Goa</a></li>
-        </ul>
-      </div>
-      <div class="footerContent footerLinks">
-        <h1>Links</h1>
-        <ul class="links">
+    <section class="homeSection" id="home">
+      <header>
+        <div class="menu">
+          <h1>Menu</h1>
+          <img src="/images/menuIcon.svg" alt="favicon" />
+        </div>
+        <ul class="navLinks">
+          <li>
+            <i class="closeMenu fa-solid fa-xmark"></i>
+            <h1 class="menuHead">Menu</h1>
+          </li>
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">About us</a></li>
           <li><a href="#location">Location</a></li>
           <li><a href="#wwd">What we do</a></li>
           <li class="popButton"><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact us</a></li>
         </ul>
-      </div>
-      <div class="footerContent footerPolicies">
-        <h1>Policies</h1>
-        <ul class="links">
-          <li><a href="#tou">Term of use</a></li>
-          <li><a href="#privacy-policy">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="footerContent footerContact">
-        <h3><strong>Address</strong>: 2nd Floor, Add India Centre, Plot No 9, Sector 125, Noida, Uttar Pradesh 201301
-        </h3>
-        <h3><strong>Phone</strong>: +91 9220797222</h3>
-        <div class="footerSocial">
-          <a href="https://www.facebook.com/profile.php?id=61571665624532" target="_blank">
-            <i class="fa-brands fa-square-facebook"></i>
+        <h2>
+          <a href="/">
+            <img src="/images/logo1.png" alt="logo" />
+            <img src="/images/logo.png" alt="logo" />
           </a>
-          <a href="https://www.instagram.com/elequeinfra/" target="_blank">
-            <i class="fa-brands fa-square-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/105586563" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://www.youtube.com/channel/UCXyAwVZhrpA9W-ER1oCHoig" target="_blank">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
+        </h2>
+      </header>
+      <main class="homeMain">
+        <video loop autoplay muted playsinline preload="auto">
+          <source
+            src="images/web_banner_video.mp4"
+            media="(min-width: 768px)"
+            type="video/mp4"
+          />
+          <source
+            src="images/web_banner_video_mob.mp4"
+            media="(max-width: 767px)"
+            type="video/mp4"
+          />
+        </video>
+      </main>
+    </section>
+    <section class="aboutSection" id="about">
+      <div class="aboutDiv">
+        <div class="aboutImg">
+          <img src="/images/aboutImg.png" alt="aboutImage" />
+        </div>
+        <div class="aboutInfo">
+          <h1>Passion at Work</h1>
+          <p>
+            Eleque Infra champions sustainable, profitable investments in
+            India’s emerging smart city landscape. Our mission is to deliver
+            transparent solutions that align with government-backed
+            infrastructure and global growth trends. By focusing on prime
+            locations within Dholera, we enable investors to tap into its vast
+            potential while ensuring a seamless, trustworthy experience—from
+            plot selection to final registration.
+          </p>
+          <button class="aboutBtn popButton">Read More</button>
         </div>
       </div>
-    </div>
-    <hr class="footerHr" />
-    <h2 class="copyright">
-      ELEQUE INFRA © Copyright 2025 All rights reserved
-    </h2>
-    <hr class="footerHr" />
-
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" defer></script>
-  <script src="/scripts/swiper.js" defer></script>
-  <script src="/scripts/script.js" defer></script>
-</body>
-
+      <div class="slider">
+        <div>
+          <picture>
+            <!-- Image for screens with min-width: 768px -->
+            <source
+              srcset="/images/aboutSlider2.png"
+              media="(min-width: 768px)"
+            />
+            <!-- Image for screens with max-width: 767px -->
+            <source
+              srcset="/images/sliderMobile2.png"
+              media="(max-width: 767px)"
+            />
+            <!-- Fallback image -->
+            <img data-lazy="/images/aboutSlider2.png" alt="Image 1" />
+          </picture>
+        </div>
+        <div>
+          <picture>
+            <!-- Image for screens with min-width: 768px -->
+            <source
+              srcset="/images/aboutSlider1.png"
+              media="(min-width: 768px)"
+            />
+            <!-- Image for screens with max-width: 767px -->
+            <source
+              srcset="/images/sliderMobile1.png"
+              media="(max-width: 767px)"
+            />
+            <!-- Fallback image -->
+            <img data-lazy="/images/aboutSlider1.png" alt="Image 2" />
+          </picture>
+        </div>
+        <div>
+          <picture>
+            <!-- Image for screens with min-width: 768px -->
+            <source
+              srcset="/images/aboutSlider3.png"
+              media="(min-width: 768px)"
+            />
+            <!-- Image for screens with max-width: 767px -->
+            <source
+              srcset="/images/sliderMobile3.png"
+              media="(max-width: 767px)"
+            />
+            <!-- Fallback image -->
+            <img data-lazy="/images/aboutSlider3.png" alt="Image 3" />
+          </picture>
+        </div>
+      </div>
+    </section>
+    <section class="locationSection" id="location">
+      <h1>Location</h1>
+      <div class="locationDiv">
+        <a href="/dholera.html">
+          <div class="locationImg popButton">
+            <div class="locationContent">
+              <p>India’s first integrated Smart City under the DMIC.</p>
+              <button>Learn more</button>
+            </div>
+            <img src="/images/locationDholera.png" alt="dholera" />
+            <h3>Dholera</h3>
+          </div>
+        </a>
+        <a href="/goa.html">
+          <div class="locationImg popButton">
+            <div class="locationContent">
+              <p>
+                Luxurious villas and stylish studio apartments capturing
+                beachside serenity.
+              </p>
+              <button>Learn more</button>
+            </div>
+            <img src="/images/locationGoa.png" alt="goa" />
+            <h3>Goa</h3>
+          </div>
+        </a>
+        <a href="/mumbai.html">
+          <div class="locationImg popButton">
+            <div class="locationContent">
+              <p>Modern housing solutions in the bustling economic capital.</p>
+              <button>Learn more</button>
+            </div>
+            <img src="/images/locationMumbai.png" alt="mumbai" />
+            <h3>Mumbai</h3>
+          </div>
+        </a>
+      </div>
+      <div class="locationBtnDiv">
+        <h1>Want to know more?</h1>
+        <p>
+          Click to button below and fill out the details for additional
+          information on investment opportunities.
+        </p>
+        <button class="locationBtn popButton">Learn More</button>
+      </div>
+    </section>
+    <section class="wwdSection" id="wwd">
+      <h1>What we do</h1>
+      <p>
+        At Eleque Infra, we prioritize customer satisfaction, architectural
+        innovation, and sustainable development. Each project is meticulously
+        planned to align with local culture and environmental considerations.
+        Our dedicated team of architects, engineers, and project managers
+        ensures timely delivery and uncompromised quality across all our
+        ventures.
+      </p>
+      <div class="wwdDiv">
+        <div class="wwdImg popButton">
+          <div class="wwdcontent">
+            <div>
+              <p>
+                Eleque Infra’s commercial projects are designed to accelerate
+                business growth by providing state-of-the-art infrastructure in
+                prime locations. We meticulously plan each property with modern
+                amenities, robust connectivity, and flexible floor plans to
+                cater to diverse enterprises. With an unwavering focus on
+                quality and innovation, we deliver spaces that drive success.
+              </p>
+              <button>Learn more</button>
+            </div>
+          </div>
+          <img src="images/commercial.png" alt="Commercial" />
+          <h3>Commercial</h3>
+        </div>
+        <div class="wwdImg popButton">
+          <div class="wwdcontent">
+            <div>
+              <p>
+                Eleque Infra’s residential projects embrace designs and
+                contemporary architecture to cater to modern lifestyles. From
+                spacious family homes to cozy urban apartments, each development
+                emphasizes comfort, safety, and community. Located in prime
+                neighborhoods, our residences feature cutting-edge amenities and
+                seamless connectivity, ensuring a balanced, vibrant living
+                experience for every homeowner.
+              </p>
+              <button>Learn more</button>
+            </div>
+          </div>
+          <img src="images/residential.png" alt="Contracting" />
+          <h3>Residential</h3>
+        </div>
+        <div class="wwdImg popButton">
+          <div class="wwdcontent">
+            <div>
+              <p>
+                Eleque Infra’s vacation homes seamlessly blend comfort, style,
+                and tranquility in picturesque locations like Goa. Each property
+                features premium amenities for a hassle-free getaway, from
+                serene poolside retreats to vibrant beachside experiences.
+                Whether as a second home or a rental investment, our vacation
+                residences offer a slice of paradise year-round.
+              </p>
+              <button>Learn more</button>
+            </div>
+          </div>
+          <img src="images/vacation.png" alt="Manufacturing" />
+          <h3>Vaction Homes</h3>
+        </div>
+      </div>
+    </section>
+    <section class="contactSection" id="contact">
+      <img
+        src="https://images.unsplash.com/photo-1737587653765-94bc8fe7b541?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="visit image"
+      />
+      <form class="contactForm" action="">
+        <h1>Request a visit</h1>
+        <input type="text" placeholder="Full name" />
+        <input type="email" placeholder="E-Mail" />
+        <input type="number" placeholder="Number" />
+        <textarea name="" rows="4" placeholder="Message" id=""></textarea>
+        <input class="submitForm" type="submit" placeholder="submit" />
+      </form>
+    </section>
+    <footer class="footer">
+      <img class="footerBg" src="/images/footerBg.png" alt="footerBg" />
+      <div class="footerLogo">
+        <a href="#home"><img src="/images/logo.png" alt="logo" /></a>
+      </div>
+      <div class="footerDiv">
+        <div class="footerContent footerCities">
+          <h1>Cities</h1>
+          <ul class="links">
+            <li><a href="#home">Dholera</a></li>
+            <li><a href="#about">Mumbai</a></li>
+            <li><a href="#">Goa</a></li>
+          </ul>
+        </div>
+        <div class="footerContent footerLinks">
+          <h1>Links</h1>
+          <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#wwd">What we do</a></li>
+            <li class="popButton"><a href="#projects">Projects</a></li>
+          </ul>
+        </div>
+        <div class="footerContent footerPolicies">
+          <h1>Policies</h1>
+          <ul class="links">
+            <li><a href="#tou">Term of use</a></li>
+            <li><a href="#privacy-policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footerContent footerContact">
+          <h3>
+            <strong>Address</strong>: 2nd Floor, Add India Centre, Plot No 9,
+            Sector 125, Noida, Uttar Pradesh 201301
+          </h3>
+          <h3><strong>Phone</strong>: +91 9220797222</h3>
+          <div class="footerSocial">
+            <a
+              href="https://www.facebook.com/profile.php?id=61571665624532"
+              target="_blank"
+            >
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/elequeinfra/" target="_blank">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/105586563"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCXyAwVZhrpA9W-ER1oCHoig"
+              target="_blank"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="footerHr" />
+      <h2 class="copyright">
+        ELEQUE INFRA © Copyright 2025 All rights reserved
+      </h2>
+      <hr class="footerHr" />
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      defer
+    ></script>
+    <script src="/scripts/swiper.js" defer></script>
+    <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/common.js" defer></script>
+  </body>
 </html>
