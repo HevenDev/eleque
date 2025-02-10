@@ -30,7 +30,7 @@
     font-size: 23px;
   }
   .overviewSection, .amenitiesSection, .locationMap{
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
   .overviewPara, .overviewImg, .highlightsImg, .highlightsPara{
     width: 300px;
@@ -58,7 +58,7 @@
 @media (max-width: 450px) {
 
   .slider {
-    margin: 2rem 0 0 0;
+    margin: 2rem 0 0;
   }
 
   .slider div {
@@ -69,7 +69,7 @@
   .aboutSection,
   .wwdSection,
   .projectsSection {
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
 
   .aboutImg {

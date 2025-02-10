@@ -42,7 +42,7 @@
     font-size: 23px;
   }
   .overviewSection, .amenitiesSection, .locationMap{
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
   .overviewPara, .overviewImg, .highlightsImg, .highlightsPara{
     width: 300px;
