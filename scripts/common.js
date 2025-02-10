@@ -9,6 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBtn = document.querySelector(".closeBtn"),
     popupBtn = document.querySelectorAll(".popButton");
 
+  const projectsLink = document.querySelector(".projectsLink");
+  const submenu = document.querySelector(".submenu");
+  projectsLink.addEventListener("click", () => {
+      submenu.style.display = "block";
+      setTimeout(() => {
+        submenu.classList.toggle("active");
+      }, 1)
+         
+  })
+
   window.addEventListener("scroll", () => {
     window.scrollY > 50
       ? header.classList.add("nav-active")

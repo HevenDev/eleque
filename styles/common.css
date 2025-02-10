@@ -320,7 +320,7 @@ header h2 a img:last-child {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
   top: 0;
   left: 0;
   height: 100%;
@@ -336,6 +336,12 @@ header h2 a img:last-child {
 
 .navLinks.active {
   transform: translateX(0);
+}
+.navLinks li{
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
 }
 
 .closeMenu {
@@ -354,6 +360,30 @@ header h2 a img:last-child {
   left: 50%;
   transform: translateX(-50%);
 }
+.projectsLink{
+  background-color: #20956c;
+  
+}
+.submenu{
+  margin-top: 1rem;
+  text-align: center;
+  opacity: 0;
+  display: none;
+  flex-direction: column;
+  height: 0;
+  transition: all 0.3s ease;
+}
+.submenu li a{
+  display: block;
+  text-align: center;
+  width: 100%;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+ .submenu.active{
+  height: 130px;
+  opacity: 1;
+} 
 /* ==== Navbar Styles End ==== */
 /* --------------------------------- */
 /* ==== Footer styles starts ==== */
