@@ -357,30 +357,32 @@ header h2 a img:last-child {
   left: 50%;
   transform: translateX(-50%);
 }
-.projectsLink{
+.projectsLink {
   background-color: #20956c;
-  
 }
-.submenu{
+
+.submenu {
   margin-top: 1rem;
   text-align: center;
   opacity: 0;
   display: none;
   flex-direction: column;
   height: 0;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, height 0.3s ease;
 }
-.submenu li a{
+
+.submenu li a {
   display: block;
   text-align: center;
   width: 100%;
   opacity: 1;
   transition: all 0.3s ease;
 }
- .submenu.active{
+
+.submenu.active {
   height: 130px;
   opacity: 1;
-} 
+}
 /* ==== Navbar Styles End ==== */
 /* --------------------------------- */
 /* ==== Footer styles starts ==== */

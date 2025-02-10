@@ -5,15 +5,24 @@ document.addEventListener("DOMContentLoaded", () => {
     link = navLinks.querySelectorAll("li a"),
     closeMenu = document.querySelector(".closeMenu")
 
-  const projectsLink = document.querySelector(".projectsLink");
-  const submenu = document.querySelector(".submenu");
-  projectsLink.addEventListener("click", () => {
-      submenu.style.display = "block";
-      setTimeout(() => {
-        submenu.classList.toggle("active");
-      }, 1)
-         
-  })
+    const projectsLink = document.querySelector(".projectsLink");
+    const submenu = document.querySelector(".submenu");
+    
+    projectsLink.addEventListener("click", () => {
+      if (submenu.classList.contains("active")) {
+        // Hide the submenu
+        submenu.classList.remove("active");
+        setTimeout(() => {
+          submenu.style.display = "none";
+        }, 300); // Match the transition duration (0.3s)
+      } else {
+        // Show the submenu
+        submenu.style.display = "block";
+        setTimeout(() => {
+          submenu.classList.add("active");
+        }, 1); // Small delay to allow display: block to take effect
+      }
+    });
 
   window.addEventListener("scroll", () => {
     window.scrollY > 50
