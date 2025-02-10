@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/WAC.css">
   <link rel="stylesheet" href="/styles/locationstyles.css">
   <link rel="stylesheet" href="/styles/common.css">
   <link rel="icon" href="/images/favicon.png" />
@@ -10,30 +11,9 @@
       src="https://kit.fontawesome.com/4c90fc44ba.js"
       crossorigin="anonymous"
     ></script>
-  <title>Eleque - Mumbai</title>
+  <title>Eleque - Contact Us</title>
 </head>
 <body>
-  <div id="popup" class="popup">
-    <div class="popupDiv">
-      <div class="parentPopup">
-        <div class="closeBtn">
-          <div class="c-bars c-bar1"></div>
-          <div class="c-bars c-bar2"></div>
-        </div>
-        <div class="popupForm">
-          <h2>Enquire Now</h2>
-          <form id="contactForm" method="POST" action="https://script.google.com/macros/s/AKfycbwA4Aghsvt74eC8RW0DOHdakyHacKCSKByuJtksa8timkFRNANqeOhR4D5nT5K_jo7U6Q/exec">
-            <input name="Client Name" type="text" placeholder="Name" required/>
-            <input name="Email" type="email" placeholder="Email" required/>
-            <input name="Phone" type="number" placeholder="Number" required/>
-            <textarea name="Message" rows="4" placeholder="Message"></textarea>
-            <p id="formError"></p>
-            <input class="submitForm" type="submit" placeholder="Submit" />
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
   <section class="locationHomeSection">
     <header>
       <div class="menu">
@@ -75,40 +55,43 @@
       </div>
     </main>
   </section>
-  <section class="contactSection">
-    <div class="contactDiv">
-      <div class="contact">
-        <h1>Let's Connect</h1>
-        <h2 class="contactSubhead">
-          Eleque Infra – Your Partner in Dholera’s Future
-        </h2>
-        <p class="contactPara">
-          Eleque Infra champions sustainable, profitable investments in
-          India’s emerging smart city landscape. Our mission is to deliver
-          transparent solutions that align with government-backed
-          infrastructure and global growth trends. By focusing on prime
-          locations within Dholera, we enable investors to tap into its vast
-          potential while ensuring a seamless, trustworthy experience—from
-          plot selection to final registration.
-        </p>
+  <section class="contactUsSection">
+    <div class="contactPage">
+      <div class="contactPageImg">
+        <img src="/images/contactImg.png" alt="">
       </div>
-      <div class="contactForm">
-        <h1>Enquire Now</h1>
+      <div class="contactPageForm">
+        <h1>Let's Connect</h1>
         <form action="">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="number" placeholder="Number" />
-          <textarea name="" id="" rows="6" placeholder="Message"></textarea>
-          <input class="submitForm" type="submit" placeholder="Submit" />
+          <div class="input-container">
+            <input type="text" id="name" placeholder=" " required>
+            <label for="name">Name</label>
+          </div>
+      
+          <div class="input-container">
+            <input type="email" id="email" placeholder=" " required>
+            <label for="email">Email</label>
+          </div>
+      
+          <div class="input-container">
+            <input type="number" id="number" placeholder=" " required>
+            <label for="number">Number</label>
+          </div>
+      
+          <div class="input-container">
+            <textarea id="message" rows="6" style="resize: none;" placeholder=" " required></textarea>
+            <label for="message">Write Your Message</label>
+          </div>
+      
+          <input class="contactPageSubmitBtn" type="submit" value="Submit">
         </form>
       </div>
     </div>
   </section>
-
   <footer class="footer">
-      <img class="footerBg" src="/images/footerBg.png" alt="footerBg">
+      <img class="footerBg" src="/images/footerBg.png" alt="footerBg" />
       <div class="footerLogo">
-        <a href="#home"><img src="/images/logo.png" alt="logo"></a>
+        <a href="#home"><img src="/images/logo.png" alt="logo" /></a>
       </div>
       <div class="footerDiv">
         <div class="footerContent footerCities">
@@ -126,6 +109,7 @@
             <li><a href="/AboutUs.html">About</a></li>
             <li><a href="/WhatWeDo.html">What we do</a></li>
             <li><a href="/goa.html">Projects</a></li>
+            <li><a href="/ContactUs.html">Contact us</a></li>
           </ul>
         </div>
         <div class="footerContent footerPolicies">
@@ -136,7 +120,10 @@
           </ul>
         </div>
         <div class="footerContent footerContact">
-          <h3><strong>Address</strong>: 2nd Floor, Add India Centre, Plot No 9, Sector 125, Noida, Uttar Pradesh 201301</h3>
+          <h3>
+            <strong>Address</strong>: 2nd Floor, Add India Centre, Plot No 9,
+            Sector 125, Noida, Uttar Pradesh 201301
+          </h3>
           <h3><strong>Phone</strong>: +91 9220797222</h3>
           <div class="footerSocial">
             <i class="fa-brands fa-square-facebook"></i>
@@ -150,7 +137,6 @@
         ELEQUE INFRA © Copyright 2025 All rights reserved
       </h2>
       <hr class="footerHr" />
-      
     </footer>
 
   <script src="/scripts/common.js"></script>

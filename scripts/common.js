@@ -3,11 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menu = document.querySelector(".menu"),
     navLinks = document.querySelector(".navLinks"),
     link = navLinks.querySelectorAll("li a"),
-    closeMenu = document.querySelector(".closeMenu"),
-    popup = document.getElementById("popup"),
-    parentPopup = document.querySelector(".parentPopup"),
-    closeBtn = document.querySelector(".closeBtn"),
-    popupBtn = document.querySelectorAll(".popButton");
+    closeMenu = document.querySelector(".closeMenu")
 
   const projectsLink = document.querySelector(".projectsLink");
   const submenu = document.querySelector(".submenu");
@@ -52,23 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
-  });
-
-  const showPopup = () => {
-      popup.classList.add("popup-active");
-      parentPopup.classList.add("parentPopup-active");
-    },
-    hidePopup = () => {
-      popup.classList.remove("popup-active");
-      parentPopup.classList.remove("parentPopup-active");
-    };
-
-  setTimeout(showPopup, 5000);
-  setInterval(showPopup, 60000);
-
-  closeBtn.addEventListener("click", hidePopup);
-  popupBtn.forEach((btn) => {
-    btn.addEventListener("click", showPopup);
   });
 });
 
