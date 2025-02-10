@@ -20,6 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-color: #0fe4a6 #d3fcee;
 }
 :root {
   --CINZEL-font- : "Cinzel", serif;
@@ -48,11 +49,6 @@
 
 *::-webkit-scrollbar-thumb:hover {
   background: #0dcf94; /* Darker shade on hover */
-}
-
-/* For Firefox */
-* {
-  scrollbar-color: #0fe4a6 #d3fcee;
 }
 
 body{
