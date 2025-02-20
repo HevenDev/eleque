@@ -50,8 +50,7 @@ p {
 .aboutDiv,
 .locationDiv,
 .wwdDiv,
-.projectDiv,
-.footerSocial {
+.projectDiv {
   display: flex;
   flex-wrap: wrap;
   align-items: center;

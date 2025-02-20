@@ -1,4 +1,26 @@
-
+@media (max-width: 768px) {
+  .contactUsSection{
+    padding: 1.5rem;
+  }
+  .about-us-div1-content h1{
+    font-size: 18px;
+  }
+  .about-us-div1-content{
+    padding: 1.25rem 0 0;
+  }
+  .footerContent{
+    width: 50%;
+  }
+  .popup-content h1 {
+    font-size: 1.5rem;
+  }
+  .popup-body h2 {
+    font-size: 1.2rem;
+  }
+  .popup-body p, .popup-body li {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 550px) {
   .logo a{
     margin-left: 1rem;
@@ -52,6 +74,9 @@
   .aboutPara{
     width: 100%;
   }
+  .contactUsSection > p, .whatWeDoSection > p{
+    width: 100%;
+  }
 }
 
 
@@ -92,6 +117,9 @@
 
   .wwdImg {
     height: 500px !important;
+  }
+  .footerPolicies{
+    display: none;
   }
 
 }

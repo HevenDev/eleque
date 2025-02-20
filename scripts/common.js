@@ -126,3 +126,46 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     submitButton.disabled = false;
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const termBtns = document.querySelectorAll(".term_of_use");
+  const privacyBtns = document.querySelectorAll(".privacy_policy");
+  const termsPopup = document.getElementById("terms-popup");
+  const privacyPopup = document.getElementById("privacy-popup");
+  const overlay = document.querySelector(".popup-overlay");
+  const closeBtns = document.querySelectorAll(".close-btn");
+
+  function openPopup(popup) {
+    overlay.style.display = "block"; // Show overlay
+    popup.style.display = "block"; // Make popup visible before animation
+    setTimeout(() => {
+      popup.classList.add("active"); // Apply animation
+    }, 10);
+  }
+
+  function closePopup() {
+    document.querySelectorAll(".popup-container").forEach(popup => {
+      popup.classList.remove("active"); // Start transition effect
+      setTimeout(() => {
+        popup.style.display = "none"; // Hide after transition ends
+      }, 300);
+    });
+    setTimeout(() => {
+      overlay.style.display = "none"; // Hide overlay after popups are gone
+    }, 300);
+  }
+
+  // Attach event listeners to all "Terms of Use" buttons
+  termBtns.forEach(btn => {
+    btn.addEventListener("click", () => openPopup(termsPopup));
+  });
+
+  // Attach event listeners to all "Privacy Policy" buttons
+  privacyBtns.forEach(btn => {
+    btn.addEventListener("click", () => openPopup(privacyPopup));
+  });
+
+  // Attach event listeners to all close buttons & overlay
+  closeBtns.forEach(btn => btn.addEventListener("click", closePopup));
+  overlay.addEventListener("click", closePopup);
+});
