@@ -588,9 +588,6 @@ textarea{
   gap: 15px;
   width: 100%;
 }
-.footerContent {
-  width: 200px;
-}
 .footerHr {
   margin: 1rem auto;
   width: 70%;
