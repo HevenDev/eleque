@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="/styles/dholerastyles.css" />
     <link rel="stylesheet" href="/styles/dholeramedia.css" />
     <link rel="stylesheet" href="/styles/media.css" />
-    <link rel="icon" href="/images/Dholera_logo.jpg" />
+    <link rel="stylesheet" href="/styles/common.css" />
+    <link rel="stylesheet" href="/styles/WAC.css" />
+    <link rel="icon" href="/images/favicon.png" />
     <script
       src="https://kit.fontawesome.com/4c90fc44ba.js"
       crossorigin="anonymous"
@@ -68,7 +70,10 @@
         </div>
       </header>
       <main class="homeMain">
-        <div class="imgWrapper"><img src="/images/Dholera1.jpg" alt="" /></div>
+        <div class="imgWrapper" ><picture>
+          <source style="width: 100%; object-fit: cover; object-position: center;" srcset="/images/dholera_mobile.jpg" media="(max-width: 450px)">
+          <img src="/images/Dholera1.jpg" alt="Dholera Image">
+        </picture></div>
       </main>
     </section>
 
@@ -454,7 +459,7 @@
         <div class="footerContent footerCities">
           <h1>Cities</h1>
           <ul class="links">
-            <li><a href="/dholera.html">Dholera</a></li>
+            <li><a href="/Eleque-dholera.html">Dholera</a></li>
             <li><a href="/mumbai.html">Mumbai</a></li>
             <li><a href="/goa.html">Goa</a></li>
           </ul>
@@ -512,5 +517,6 @@
     </footer>
 
     <script src="/scripts/dholerascript.js"></script>
+    <script src="/scripts/common.js"></script>
   </body>
 </html>

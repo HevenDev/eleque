@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let sections = [
     { selector: ".about-number", finalValues: [5, 2, 5, 4] },
     { selector: ".mumbaiNumber", finalValues: [6, 30, 75] },
-    { selector: ".goaNumber", finalValues: [8, 6, 1.2] }
+    { selector: ".goaNumber", finalValues: [8, 6, 1.2] },
+    { selector: ".dholeraNumber", finalValues: [9, 920, 500] }
   ];
 
   let hasStarted = false; // Prevent multiple triggers

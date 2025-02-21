@@ -64,4 +64,8 @@
   .aboutPara{
     width: 100%;
   }
+  .homeMain{
+    height: 70vh;
+    transform: translateY(110px);
+  }
 }

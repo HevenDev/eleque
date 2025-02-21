@@ -44,6 +44,10 @@ p {
   text-align: center;
   z-index: 5;
 }
+.locationBannerContent h1{
+  font-size: 48px;
+  padding-bottom: 0.75rem;
+}
 
 /* About section  */
 .locationAboutSection img{
